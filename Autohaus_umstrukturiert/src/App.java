@@ -151,8 +151,8 @@ public class App {
         Kombi kom1 = new Kombi("Mercedes", "Sprinter", 150, 30000, "nein");
         LKW l1 = new LKW("VW", "Nutzfahrzeug1", 150, 50000, 7);
         Sportwagen sport1 = new Sportwagen("BMW", "M6", 400, 60000, 330);
-        Kunden k1 = new Kunden("Jordan", "Velte");
-        Verkaeufer v1 = new Verkaeufer("Thomas", "Dietrich");
+        Kunden k1 = new Kunden("Jordan", "Velte", 22);
+        Verkaeufer v1 = new Verkaeufer("Thomas", "Dietrich", 50);
         //Hinzufügen der Demodaten in jeweilige ArrayList
         //vk.add(verkauf1);
         gw.add(gw1);
@@ -163,6 +163,7 @@ public class App {
         v.add(v1);
 
         //For-Schleifen für ArrayList --> fügt automatisch über Punktnotation mit Getter die klassenspezifische Variable für individuelle extraData 
+        //VERKAUFSOBJEKT
         for (Gelaendewagen x_gw : gw){
             x_gw.printDatenString(x_gw.getMaxkippradius());
         }
@@ -174,6 +175,13 @@ public class App {
         }
         for (Sportwagen x_sport : sport){
             x_sport.printDatenInt(x_sport.getMaxgeschwindigkeit());
+        }
+        //PERSON
+        for (Kunden x_k : k){
+            x_k.printDatenInt(x_k.getKundennummer());
+        }
+        for (Verkaeufer x_v : v){
+            x_v.printDatenInt(x_v.getPersonalnummer());
         }
 
 
