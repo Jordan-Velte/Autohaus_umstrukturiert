@@ -1,3 +1,4 @@
+//OBERKLASSE
 public class Person {
     String _vorname;
     String _nachname;

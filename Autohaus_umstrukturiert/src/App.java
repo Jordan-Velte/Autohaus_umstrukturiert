@@ -1,5 +1,6 @@
-//import
+//import für Scanner
 import java.util.Scanner;
+//import für ArrayList
 import java.util.*;
 public class App {
 
@@ -145,7 +146,8 @@ public class App {
         ArrayList<Verkaeufer> v = new ArrayList<Verkaeufer>();
 
         //ArrayList<Verkaufsobjekt> vo = new ArrayList<Verkaufsobjekt>();
-        //DEMODATEN
+        
+        //DEMODATEN der Subklassen
         //Verkauf verkauf1 = new Verkauf(gw.get(0), v.get(0), k.get(0), 65000);
         Gelaendewagen gw1 = new Gelaendewagen("Mercedes", "G220", 250,70000, "23,5");
         Kombi kom1 = new Kombi("Mercedes", "Sprinter", 150, 30000, "nein");
@@ -153,7 +155,8 @@ public class App {
         Sportwagen sport1 = new Sportwagen("BMW", "M6", 400, 60000, 330);
         Kunden k1 = new Kunden("Jordan", "Velte", 22);
         Verkaeufer v1 = new Verkaeufer("Thomas", "Dietrich", 50);
-        //Hinzufügen der Demodaten in jeweilige ArrayList
+
+        //Hinzufügen der Demodaten in jeweilige ArrayList über Punktnotation an den Objekten mit add-Methodik
         //vk.add(verkauf1);
         gw.add(gw1);
         kom.add(kom1);
@@ -162,7 +165,8 @@ public class App {
         k.add(k1);
         v.add(v1);
 
-        //For-Schleifen für ArrayList --> fügt automatisch über Punktnotation mit Getter die klassenspezifische Variable für individuelle extraData 
+        //For-Schleifen für ArrayList --> fügt automatisch über Punktnotation mit Getter die klassenspezifische Variable für individuelle extraData der Oberklasse
+        
         //VERKAUFSOBJEKT
         for (Gelaendewagen x_gw : gw){
             x_gw.printDatenString(x_gw.getMaxkippradius());
@@ -176,6 +180,7 @@ public class App {
         for (Sportwagen x_sport : sport){
             x_sport.printDatenInt(x_sport.getMaxgeschwindigkeit());
         }
+        
         //PERSON
         for (Kunden x_k : k){
             x_k.printDatenInt(x_k.getKundennummer());

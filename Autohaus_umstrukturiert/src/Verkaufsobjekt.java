@@ -1,9 +1,12 @@
+//OBERKLASSE
 public class Verkaufsobjekt {
+    //Deklaration der Klassenvariablen
     int _ps;
     String _typ;
     String _marke;
     int _preis;
 
+    //Constructor
     public Verkaufsobjekt(String marke, String typ, int ps, int preis){
         setMarke(marke);
         setPreis(preis);
@@ -11,6 +14,7 @@ public class Verkaufsobjekt {
         setTyp(typ);
     }
 
+    //Setter
     public void setMarke(String marke) {
         this._marke = marke;
     }
@@ -23,6 +27,7 @@ public class Verkaufsobjekt {
     public void setTyp(String typ) {
         this._typ = typ;
     }
+    //Getter
     public String getMarke() {
         return _marke;
     }
@@ -35,11 +40,13 @@ public class Verkaufsobjekt {
     public String getTyp() {
         return _typ;
     }
-    //Parameter zusätzlich --> diesen bekommt man von den Unterklassen durch Punktnotation an den Objekten
+    //Parameter zusätzlich --> dieser wird von den Subklassen durch Punktnotation an den Objekten übergeben
     //Müssen nur einmal ändern, dann gilt das für alle vererbten Klassen --> Man schreibt alles einmal, weniger fehleranfällig
+    //printDaten Methode für einen extraData des Datentyps String (siehe z.B. String siebensitze)
     public void printDatenString(String extraData){
         System.out.println("Daten des Verkaufsobjekts: " + this.getMarke() + " " + this.getTyp() + " " + this.getPs() + " " + this.getPreis() + " " + extraData);
     }
+    //printDaten Methode für einen extraData des Datentyps Integer (siehe z.B. int maxgeschwindigkeit)
     public void printDatenInt(int extraData){
         System.out.println("Daten des Verkaufsobjekts: " + this.getMarke() + " " + this.getTyp() + " " + this.getPs() + " " + this.getPreis() + " " + extraData);
     }
