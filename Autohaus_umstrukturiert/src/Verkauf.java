@@ -1,13 +1,13 @@
 public class Verkauf {
     //DEKLARATION der Klassenvariablen
-    Autos _auto;
+    Verkaufsobjekt _verkaufsobjekt;
     Kunden _kunde;
     int _preis;
     Verkaeufer _verkaeufer;
 
     //KONSTRUKTOR. Parameterübergabe im Constructor für Setter-Methode mit Variablen --> Definiert "Regeln" für Deklaration der Variablen --> Besonderheit: Parameter des Verkauf-Constructors haben Verweis zu Variablen unterschiedlicher Klassen. Wird dieser Verweis gelöscht, so ist das Objekt nicht mehr relevant
-    public Verkauf (Autos autos, Verkaeufer verkaeufer, Kunden kunden, int preis){
-        this.setAuto(autos);
+    public Verkauf (Verkaufsobjekt verkaufsobjekt, Verkaeufer verkaeufer, Kunden kunden, int preis){
+        this.setVerkaufsobjekt(verkaufsobjekt);
         this.setVerkaeufer(verkaeufer);
         this.setKunde(kunden);
         this.setPreis(preis);
@@ -15,8 +15,8 @@ public class Verkauf {
     
     //GETTER (STRG + Leerzeichen = ...get eingeben)
     //Methodensignatur
-    public Autos getAuto() {
-        return _auto;
+    public Verkaufsobjekt getVerkaufsobjekt() {
+        return _verkaufsobjekt;
     }
     public Kunden getKunde() {
         return _kunde;
@@ -29,9 +29,6 @@ public class Verkauf {
     }
 
     //SETTER
-    public void setAuto(Autos _auto) {
-        this._auto = _auto;
-    }
     public void setKunde(Kunden _kunde) {
         this._kunde = _kunde;
     }
@@ -40,5 +37,8 @@ public class Verkauf {
     }
     public void setVerkaeufer(Verkaeufer _verkaeufer) {
         this._verkaeufer = _verkaeufer;
+    }
+    public void setVerkaufsobjekt(Verkaufsobjekt verkaufsobjekt) {
+        this._verkaufsobjekt = verkaufsobjekt;
     }
 }

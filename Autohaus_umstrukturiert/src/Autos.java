@@ -1,3 +1,5 @@
+
+/*
 public class Autos {
     //DEKLARATION
     String _marke;
@@ -40,3 +42,4 @@ public class Autos {
         _baujahr = baujahr;
     }    
 }
+*/

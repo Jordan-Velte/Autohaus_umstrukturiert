@@ -1,10 +1,11 @@
 //import
 import java.util.Scanner;
-
-
+import java.util.*;
 public class App {
+
     
-    /*
+    
+
     //Klassenvariablen müssen innerhalb Klassenrumpfes sein, dürfen nicht in Methoden! Static, weil darf nur einmal deklariert werden, einmalig --> App Java darf nur einen Startpunkt haben, Compiler wüsste sonst nicht wo er anfangen sollte. 
     private static Scanner _scanner;
     //SETTER (durch STRG + set)
@@ -20,14 +21,14 @@ public class App {
         System.out.println("Bitte wähle aus:");
         System.out.println("(1) Neuer Verkauf");
         System.out.println("(2) Neuer Kunde");
-        System.out.println("(3) Neues Auto");
+        System.out.println("(3) Neues Verkaufsobjekt");
         System.out.println("(4) Neuer Verkäufer");
         //Methodenvariable = choice. Eingabe wird zwischengespeichert in Variable Choice
         String choice = getScanner().nextLine();
         System.out.println("Deine Auswahl ist: " + choice);
     }
-    */
-
+    
+    /*
     //Verkauf
     static Verkauf[] _verkaeufe;
     public static Verkauf[] getALLVerkauf(){
@@ -40,6 +41,10 @@ public class App {
     //Autos Liste
     public static void addAuto(Autos autos){
         addObject(autos, getALLAutos());
+
+    //Verkaufsobjekte Liste
+
+
         /*int i = 0;
         //Erstes Element wird aus Array geholt (nennen wir a)
         for(Autos a : getALLAutos()){
@@ -53,9 +58,10 @@ public class App {
             if(i>7){
                 System.out.println("Kein Platz mehr auf dem Hof von Schmidt...");
             }
-        }*/
+        }
 
-    }
+    }*/
+    /*
     //Variablen Deklarierung statisch [] = Klassenvariablen mit Array. Autos = Datentyp
     static Autos [] _autos;
     public static Autos[] getALLAutos(){
@@ -79,8 +85,10 @@ public class App {
             if(i>7){
                 System.out.println("Kein Platz mehr auf dem Hof von Schmidt...");
             }
-        }*/
-    }
+        }
+    }*/
+    
+    /*
     //Rückgabemethode --> Array vom Typ Kunde wird zurückgegeben
     public static Kunden [] getALLKunden(){
         return _kunden;
@@ -97,6 +105,8 @@ public class App {
             i = i+1;
         }
     } 
+    */
+    /*
     //Verkauefer Liste
     static Verkaeufer[] _verkaeufer;
     public static void addVerkaeufer(Verkaeufer verkaeufer){
@@ -114,14 +124,63 @@ public class App {
             if(i>7){
                 System.out.println("Kein Platz mehr auf dem Hof von Schmidt...");
             }
-        }*/
+        }
     }
     public static Verkaeufer[] getALLVerkaeufer(){
         return _verkaeufer;
     }
+    */
+    
 
     //Main-Methode ist immer der Einsteigspunkt des Programms
     public static void main(String[] args) throws Exception {
+
+        //ArrayLists
+        //ArrayList<Verkauf> vk = new ArrayList<Verkauf>();
+        ArrayList<Gelaendewagen> gw = new ArrayList<Gelaendewagen>();
+        ArrayList<Kombi> kom = new ArrayList<Kombi>();
+        ArrayList<LKW> l = new ArrayList<LKW>();
+        ArrayList<Sportwagen> sport = new ArrayList<Sportwagen>();
+        ArrayList<Kunden> k = new ArrayList<Kunden>();
+        ArrayList<Verkaeufer> v = new ArrayList<Verkaeufer>();
+
+        //ArrayList<Verkaufsobjekt> vo = new ArrayList<Verkaufsobjekt>();
+        //DEMODATEN
+        //Verkauf verkauf1 = new Verkauf(gw.get(0), v.get(0), k.get(0), 65000);
+        Gelaendewagen gw1 = new Gelaendewagen("Mercedes", "G220", 250,70000, "23,5");
+        Kombi kom1 = new Kombi("Mercedes", "Sprinter", 150, 30000, "nein");
+        LKW l1 = new LKW("VW", "Nutzfahrzeug1", 150, 50000, 7);
+        Sportwagen sport1 = new Sportwagen("BMW", "M6", 400, 60000, 330);
+        Kunden k1 = new Kunden("Jordan", "Velte");
+        Verkaeufer v1 = new Verkaeufer("Thomas", "Dietrich");
+        //Hinzufügen der Demodaten in jeweilige ArrayList
+        //vk.add(verkauf1);
+        gw.add(gw1);
+        kom.add(kom1);
+        l.add(l1);
+        sport.add(sport1);
+        k.add(k1);
+        v.add(v1);
+
+        //For-Schleifen für ArrayList --> fügt automatisch über Punktnotation mit Getter die klassenspezifische Variable für individuelle extraData 
+        for (Gelaendewagen x_gw : gw){
+            x_gw.printDatenString(x_gw.getMaxkippradius());
+        }
+        for (Kombi x_kom : kom){
+            x_kom.printDatenString(x_kom.getSiebensitze());
+        }
+        for (LKW x_l : l){
+            x_l.printDatenInt(x_l.getMaxzuladungtonnen());
+        }
+        for (Sportwagen x_sport : sport){
+            x_sport.printDatenInt(x_sport.getMaxgeschwindigkeit());
+        }
+
+
+
+        
+
+        /*
         //Initialisierung _autos --> In Klammer steht Anzahl der möglichen Elemente eines Arrays
         _autos = new Autos[8];
         _autos [0] = new Autos("BMW", "I3", "2020");
@@ -140,13 +199,14 @@ public class App {
 
         //Initialisierung _verkaeufe
         _verkaeufe = new Verkauf [8];
+        */
 
 
         
         //Neues Objekt der Klasse Menu
-        Menu menu = new Menu();
+        //Menu menu = new Menu();
         //Methode wird durch Punktnotation am Objekt aufgerufen
-        menu.startMenu();
+        //menu.startMenu();
         //menu.createAutos();
         //Neues Objekt a1 der Klasse Menu
         /*Menu a1 = new Menu();*/

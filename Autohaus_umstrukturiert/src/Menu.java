@@ -26,12 +26,13 @@ public class Menu {
     public Scanner getScanner() {
         return _scanner;
     }
+    /*
     //Menu-Methode
     public void startMenu(){
         System.out.println("Bitte wähle aus:");
         System.out.println("(1) Neuer Verkauf");
         System.out.println("(2) Neuer Kunde");
-        System.out.println("(3) Neues Auto");
+        System.out.println("(3) Neues Verkaufsobjekt");
         System.out.println("(4) Neuer Verkäufer");
         System.out.println("(5) Zeige alle Autos");
         System.out.println("(6) Zeige alle Kunden");
@@ -72,6 +73,7 @@ public class Menu {
         }
         startMenu();
     }
+    */
 
     /*
     //CONSTRUCTOR für Autos
@@ -114,6 +116,17 @@ public class Menu {
     //Public: Klassenübergreifend
     //Void: Dienstleistungsmethode, Datentyp: Rückgabemethode
     //In der Klammer stehen Parameter die Methode übergeben werden
+    /*
+    public void showVerkaufsobjekt(){
+        //For-Each Schleife
+        for (Verkaufsobjekt verkaufsobjekt : App.vo){
+            if(autos != null){
+                System.out.println(autos.getMarke() + " " + autos.getBaujahr());
+            }
+        }
+    }*/
+
+    /*
     public void showAutos(){
         //For-Each Schleife
         for (Autos autos : App.getALLAutos()){
@@ -122,6 +135,7 @@ public class Menu {
             }
         }
     }
+    
     public void showKunden(){
         for (Kunden kunden : App.getALLKunden()){
             if(kunden != null){
@@ -138,8 +152,10 @@ public class Menu {
             }
         }
     }
+    */
 
     //Über Punktnotation Getter der Klasse aufrufen
+    /*
     public void showVerkaeufe(){
         int gesamtpreis = 0;
         for (Verkauf verkauf : App.getALLVerkauf()){
@@ -151,8 +167,9 @@ public class Menu {
         }
         System.out.println("Der Gesamtpreis beträgt: " + gesamtpreis);
     }
+    */
 
-    
+    /*
     //createAutos-Methode, Work in Progress --> deshalb Kommentar tbd
     public void createAutoMenu(){
         //System.out.print --> Cursor ist genau am Ende des Strings für die Eingabe im Terminal
@@ -167,6 +184,7 @@ public class Menu {
         String choicepreis = getScanner().nextLine();
         System.out.print("Geben Sie das Baujahr ein:");
         String choicebaujahr = getScanner().nextLine();*/
+        /*
         System.out.println("Es wurde ein neues Auto eingetragen.");
         //Variablen zu einem Auto zusammensetzen, Objekt wird erzeugt, welches direkt in einen Array gesetzt wird.
         App.addAuto(new Autos(choicemarke, choicemodell, choicebaujahr));
@@ -179,6 +197,8 @@ public class Menu {
         //Autos a1 = new Autos(choicemarke, choicemodell);
         //startMenu();
     }
+    */
+    /*
     //Kunden-Menu-Methode
     public void createKundeMenu(){
         System.out.println("Vorname:");
@@ -188,11 +208,13 @@ public class Menu {
         System.out.println("Es wurde ein neuer Kunde eingetragen.");
         App.addKunde(new Kunden(choicevorname, choicenachname));
         System.out.println(App.getALLKunden());
-        /* System.out.println("Vorname: " + choicevorname);
+         System.out.println("Vorname: " + choicevorname);
         System.out.println("Nachname: " + choicenachname);
-        Kunden k1 = new Kunden(choicevorname, choicenachname);
-        System.out.println(); */
+        //Kunden k1 = new Kunden(choicevorname, choicenachname);
+        //System.out.println();
     }
+    */
+    /*
     //Verkaeufer-Menu-Methode
     public void createVerkaeuferMenu(){
         System.out.println("Vorname:");
@@ -205,10 +227,13 @@ public class Menu {
         System.out.println("Es wurde ein neuer Verkaeufer eingetragen.");
         App.addVerkaeufer(new Verkaeufer(choicevorname, choicenachname));
         System.out.println(App.getALLKunden());
-        /*System.out.println("Vorname: " + choicevorname);
-        System.out.println("Vorname: " + choicenachname);
-        Verkaeufer v1 = new Verkaeufer(choicevorname, choicenachname); */
-    }
+        
+        //System.out.println("Vorname: " + choicevorname);
+        //System.out.println("Vorname: " + choicenachname);
+        //Verkaeufer v1 = new Verkaeufer(choicevorname, choicenachname);
+    }*/
+
+    /*
     //Verkauf-Menu-Methode
     public void createVerkaufMenu(){
         //Auswahl des Preises
@@ -267,11 +292,11 @@ public class Menu {
 
         //Hinzufügen in Array (Price neu)
         App.addVerkauf(new Verkauf(App.getALLAutos()[car_index], App.getALLVerkaeufer()[vendor_index], App.getALLKunden()[client_index], price));
-    }   
+    }
+    */
 
 
-
-
+        
         /*//Ausgabe des Verkaufs
         System.out.println("Auto: " + App.getALLAutos() [car_index]+ "Kunde: " + App.getALLKunden() [client_index]+ "Verkäufer: " + App.getALLVerkaeufer() [vendor_index] + "Preis: " + price);*/
         //FALSCH

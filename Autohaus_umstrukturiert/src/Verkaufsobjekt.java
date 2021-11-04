@@ -35,6 +35,14 @@ public class Verkaufsobjekt {
     public String getTyp() {
         return _typ;
     }
+    //Parameter zusätzlich --> diesen bekommt man von den Unterklassen durch Punktnotation an den Objekten
+    //Müssen nur einmal ändern, dann gilt das für alle vererbten Klassen --> Man schreibt alles einmal, weniger fehleranfällig
+    public void printDatenString(String extraData){
+        System.out.println("Daten des Verkaufsobjekts: " + this.getMarke() + " " + this.getTyp() + " " + this.getPs() + " " + this.getPreis() + " " + extraData);
+    }
+    public void printDatenInt(int extraData){
+        System.out.println("Daten des Verkaufsobjekts: " + this.getMarke() + " " + this.getTyp() + " " + this.getPs() + " " + this.getPreis() + " " + extraData);
+    }
 
 
 }
